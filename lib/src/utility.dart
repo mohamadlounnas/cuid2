@@ -56,7 +56,7 @@ double Function() createRandom({bool throwIfInsecure = false}) {
 
 String hash([String input = ""]) {
   final d = SHA3Digest(512);
-  final sha3 = d.process(utf8.encode(input) as Uint8List);
+  final sha3 = d.process(utf8.encode(input));
 
   // Drop the first character because it will bias the histogram
   // to the left.
