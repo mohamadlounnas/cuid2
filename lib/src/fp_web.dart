@@ -1,4 +1,4 @@
-import 'dart:html';
+import 'package:web/web.dart';
 
 /// This is a fingerprint of the host environment. It is used to help
 /// prevent collisions when generating ids in a distributed system.

@@ -12,6 +12,7 @@ executables:
 
 dependencies:
   pointycastle: ^3.9.1
+  web: ^1.1.1
 
 dev_dependencies:
   lints: ^3.0.0

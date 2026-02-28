@@ -5,7 +5,9 @@ import 'dart:typed_data';
 import 'package:cuid2/src/cuid2_base.dart';
 import 'package:pointycastle/digests/sha3.dart';
 
-import './fp_native.dart' if (dart.library.html) './fp_web.dart' as fp_native;
+// Use native (dart:io) fingerprint on VM/native; use web stub on web/WASM.
+// dart.library.html can be false for WASM, so we key off dart.library.io instead.
+import './fp_web.dart' if (dart.library.io) './fp_native.dart' as fp_native;
 
 /// Adapted from https://github.com/juanelas/bigint-conversion
 /// MIT License Copyright (c) 2018 Juan Hernández Serrano
